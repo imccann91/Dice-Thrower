@@ -1,0 +1,27 @@
+
+<resources>
+    <string name="app_name">Dice</string>
+    <string-array name="diceType">
+        <item>d4</item>
+        <item>d6</item>
+        <item>d8</item>
+        <item>d10</item>
+        <item>d20</item>
+        <item>d30</item>
+        <item>d100</item>
+    </string-array>
+
+    <string-array name="diceNumber">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+</resources>
