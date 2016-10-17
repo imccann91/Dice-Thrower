@@ -24,29 +24,18 @@
 
         <TextView
             android:layout_width="200dp"
-            android:layout_height="50dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Type of Dice"
             android:id="@+id/typeOfDiceTextID"
             android:layout_row="0"
             android:layout_rowSpan="1"
             android:layout_column="0"
-            android:layout_columnSpan="1"/>
-
-        <TextView
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Number of Dice"
-            android:id="@+id/numberOfDiceTextID"
-            android:layout_row="1"
-            android:layout_rowSpan="1"
-            android:layout_column="0"
-            android:layout_columnSpan="1"/>
+            android:layout_columnSpan="1"
+            android:layout_height="75dp" />
 
         <Spinner
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="125dp"
+            android:layout_height="75dp"
             android:id="@+id/typeOfDiceSelectionID"
             android:layout_row="0"
             android:layout_rowSpan="1"
@@ -55,8 +44,8 @@
             android:clickable="true" />
 
         <Spinner
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="125dp"
+            android:layout_height="75dp"
             android:id="@+id/numberOfDiceSelectionID"
             android:layout_row="1"
             android:layout_rowSpan="1"
@@ -64,23 +53,18 @@
             android:layout_columnSpan="1"
             android:clickable="true" />
 
-    </GridLayout>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Number of Dice"
+            android:id="@+id/numberOfDiceTextID"
+            android:layout_row="1"
+            android:layout_rowSpan="1"
+            android:layout_column="0"
+            android:layout_columnSpan="1"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:id="@+id/resultsTextID"
-        android:layout_below="@+id/selectionGrid"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:background="@color/material_grey_300"
-        android:enabled="true"
-        android:typeface="normal"
-        android:visibility="visible"
-        android:textSize="30sp"
-        android:textStyle="italic"/>
+    </GridLayout>
 
     <Button
         android:layout_width="wrap_content"
@@ -133,4 +117,18 @@
         android:typeface="normal"
         android:textColor="#000000"
         android:visibility="visible"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/resultsTextID"
+        android:background="@color/material_grey_300"
+        android:enabled="true"
+        android:typeface="normal"
+        android:visibility="visible"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        android:layout_below="@+id/selectionGrid"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
