@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
     private TextView summationText;
     private Spinner typeOfDiceSelection;
     private Spinner numberOfDiceSelection;
-    public Context mainContext;
+    private Context mainContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +63,7 @@ public class MainActivity extends Activity {
                 vibrateNotification.setContext(mainContext);
                 audioNotification.setContext(mainContext);
 
+                boolean isVorple = false;
                 int numberOfDiceToThrow = numberOfDiceSelection.getSelectedItemPosition();
                 int typeOfDiceToThrow = typeOfDiceSelection.getSelectedItemPosition();
                 String message = "";
@@ -86,9 +87,14 @@ public class MainActivity extends Activity {
                 } else if (typeOfDiceToThrow == 5) {
                     diceRoll.rollDThirty(numberOfDiceToThrow + 1);
                     message = diceRoll.toString();
-                } else {
+                } else if(typeOfDiceToThrow == 6) {
                     diceRoll.rollDOneHundred(numberOfDiceToThrow + 1);
                     message = diceRoll.toString();
+                }else{
+                    isVorple = true;
+                    Vorple vorple = new Vorple();
+                    vorple.rollVorple();
+                    message = vorple.getString();
                 }
 
                 if (diceRoll.isCritical() == true) {
@@ -99,9 +105,14 @@ public class MainActivity extends Activity {
                 resultsText.setText(message);
 
                 String summation = "";
-                summation = summation + diceRoll.getSumOfRoll();
-                summationText.setText(summation);
-                diceRoll.clearCriticalHit();
+                if(isVorple == false) {
+                    summation = summation + diceRoll.getSumOfRoll();
+                    summationText.setText(summation);
+                    diceRoll.clearCriticalHit();
+                }else{
+                    summationText.setText(summation);
+                    diceRoll.clearCriticalHit();
+                }
 
             }
         });

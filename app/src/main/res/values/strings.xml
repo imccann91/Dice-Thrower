@@ -9,6 +9,7 @@
         <item>d20</item>
         <item>d30</item>
         <item>d100</item>
+        <item>Vorple</item>
     </string-array>
 
     <string-array name="diceNumber">
@@ -22,6 +23,11 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
     </string-array>
 
 </resources>

@@ -28,7 +28,7 @@ public class AudioNotification implements Runnable {
             player.setAudioStreamType(AudioManager.STREAM_MUSIC);
             player.setVolume(1, 1);
             player.start();
-            while (player.isPlaying() == true) {
+            while (player.isPlaying()) {
 
             }
             player.stop();

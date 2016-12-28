@@ -21,7 +21,7 @@ public class VibrateNotification implements Runnable {
     @Override
     public void run() {
         if (vibrator != null) {
-            if (vibrator.hasVibrator() == true) {
+            if (vibrator.hasVibrator()) {
                 vibrator.vibrate(vibratePattern, -1);
 
             }
