@@ -99,6 +99,7 @@ public class MainActivity extends Activity {
 
                 if (diceRoll.isCritical() == true) {
                     vibrateNotification.start();
+                    audioNotification.setUpAudioNotifier("");
                     audioNotification.start();
                 }
 
@@ -111,7 +112,9 @@ public class MainActivity extends Activity {
                     diceRoll.clearCriticalHit();
                 }else{
                     summationText.setText(summation);
-                    diceRoll.clearCriticalHit();
+                    diceRoll.clearCriticalHit(); //Shouldn't need this, doing it anyway.
+                    audioNotification.setUpAudioNotifier(message);
+                    audioNotification.start();
                 }
 
             }
