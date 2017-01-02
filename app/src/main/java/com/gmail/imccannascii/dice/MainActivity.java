@@ -56,6 +56,12 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
 
+                boolean isVorple = false;
+                int numberOfDiceToThrow = numberOfDiceSelection.getSelectedItemPosition();
+                int typeOfDiceToThrow = typeOfDiceSelection.getSelectedItemPosition();
+                String message = "";
+                String summation = "";
+
                 VibrateNotification vibrateNotification = new VibrateNotification();
                 AudioNotification audioNotification = new AudioNotification();
 
@@ -63,10 +69,6 @@ public class MainActivity extends Activity {
                 vibrateNotification.setContext(mainContext);
                 audioNotification.setContext(mainContext);
 
-                boolean isVorple = false;
-                int numberOfDiceToThrow = numberOfDiceSelection.getSelectedItemPosition();
-                int typeOfDiceToThrow = typeOfDiceSelection.getSelectedItemPosition();
-                String message = "";
                 DiceRoll diceRoll = new DiceRoll();
 
                 if (typeOfDiceToThrow == 0) {
@@ -103,9 +105,6 @@ public class MainActivity extends Activity {
                     audioNotification.start();
                 }
 
-                resultsText.setText(message);
-
-                String summation = "";
                 if(isVorple == false) {
                     summation = summation + diceRoll.getSumOfRoll();
                     summationText.setText(summation);
@@ -117,6 +116,7 @@ public class MainActivity extends Activity {
                     audioNotification.start();
                 }
 
+                resultsText.setText(message);
             }
         });
 

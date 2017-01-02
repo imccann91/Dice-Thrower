@@ -46,7 +46,6 @@ public class AudioNotification implements Runnable {
 
     public void setContext(Context sourceContext) {
         context = sourceContext;
-        //setUpAudioNotifier();
     }
 
     public void setUpAudioNotifier(String whichSoundToPLay) {

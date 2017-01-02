@@ -23,7 +23,6 @@ public class VibrateNotification implements Runnable {
         if (vibrator != null) {
             if (vibrator.hasVibrator()) {
                 vibrator.vibrate(vibratePattern, -1);
-
             }
         }
     }

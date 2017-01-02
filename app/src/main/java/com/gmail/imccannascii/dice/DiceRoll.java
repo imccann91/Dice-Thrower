@@ -30,7 +30,6 @@ public class DiceRoll {
                     criticalHit = true;
                 }
             }
-
             diceRolls[i] = roll;
         }
     }
@@ -91,7 +90,6 @@ public class DiceRoll {
                     criticalHit = true;
                 }
             }
-
             diceRolls[i] = roll;
         }
     }
@@ -112,7 +110,6 @@ public class DiceRoll {
                     criticalHit = true;
                 }
             }
-
             diceRolls[i] = roll;
         }
 
@@ -170,7 +167,6 @@ public class DiceRoll {
                 rollsAsString = rollsAsString + diceRolls[i] + ", ";
             }
         }
-
         return rollsAsString;
     }
 
