@@ -99,10 +99,12 @@ public class MainActivity extends Activity {
                     message = vorple.getString();
                 }
 
-                if (diceRoll.isCritical() == true) {
+                if (diceRoll.isCritical() == true && typeOfDiceToThrow == 4) {
                     vibrateNotification.start();
                     audioNotification.setUpAudioNotifier("");
                     audioNotification.start();
+                }else if(diceRoll.isCritical() == true){
+                    vibrateNotification.start();
                 }
 
                 if(isVorple == false) {
