@@ -51,30 +51,32 @@ public class AudioNotification implements Runnable {
     public void setUpAudioNotifier(String whichSoundToPLay) {
         audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
 
-        if (whichSoundToPLay.equals("Head")) {
-            player = MediaPlayer.create(context, R.raw.lifesupport);
-        } else {
-            if (whichSoundToPLay.equals("Left Arm")) {
+        switch(whichSoundToPLay)
+        {
+            case "Head":
+                player = MediaPlayer.create(context, R.raw.lifesupport);
+                break;
+            case "Left Arm":
                 player = MediaPlayer.create(context, R.raw.leftarm);
-            } else {
-                if (whichSoundToPLay.equals("Torso")) {
-                    player = MediaPlayer.create(context, R.raw.centertorso);
-                } else {
-                    if (whichSoundToPLay.equals("Right Arm")) {
-                        player = MediaPlayer.create(context, R.raw.rightarm);
-                    } else {
-                        if (whichSoundToPLay.equals("Left Leg")) {
-                            player = MediaPlayer.create(context, R.raw.leftleg);
-                        } else {
-                            if (whichSoundToPLay.equals("Right Leg")) {
-                                player = MediaPlayer.create(context, R.raw.rightleg);
-                            } else {
-                                player = MediaPlayer.create(context, R.raw.crtihit);
-                            }
-                        }
-                    }
-                }
-            }
+                break;
+            case "Torso":
+                player = MediaPlayer.create(context, R.raw.centertorso);
+                break;
+            case "Right Arm":
+                player = MediaPlayer.create(context, R.raw.rightarm);
+                break;
+            case "Left Leg":
+                player = MediaPlayer.create(context, R.raw.leftleg);
+                break;
+            case "Right Leg":
+                player = MediaPlayer.create(context, R.raw.rightleg);
+                break;
+            case "":
+                player = MediaPlayer.create(context, R.raw.crtihit);
+                break;
+            default:
+                player = MediaPlayer.create(context, R.raw.crtihit);
+                break;
         }
     }
 

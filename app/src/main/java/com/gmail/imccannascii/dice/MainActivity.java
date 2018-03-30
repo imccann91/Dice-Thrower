@@ -71,32 +71,42 @@ public class MainActivity extends Activity {
 
                 DiceRoll diceRoll = new DiceRoll();
 
-                if (typeOfDiceToThrow == 0) {
-                    diceRoll.rollDFour(numberOfDiceToThrow + 1);
-                    message = diceRoll.toString();
-                } else if (typeOfDiceToThrow == 1) {
-                    diceRoll.rollDSix(numberOfDiceToThrow + 1);
-                    message = diceRoll.toString();
-                } else if (typeOfDiceToThrow == 2) {
-                    diceRoll.rollDEight(numberOfDiceToThrow + 1);
-                    message = diceRoll.toString();
-                } else if (typeOfDiceToThrow == 3) {
-                    diceRoll.rollDTen(numberOfDiceToThrow + 1);
-                    message = diceRoll.toString();
-                } else if (typeOfDiceToThrow == 4) {
-                    diceRoll.rollDTwenty(numberOfDiceToThrow + 1);
-                    message = diceRoll.toString();
-                } else if (typeOfDiceToThrow == 5) {
-                    diceRoll.rollDThirty(numberOfDiceToThrow + 1);
-                    message = diceRoll.toString();
-                } else if(typeOfDiceToThrow == 6) {
-                    diceRoll.rollDOneHundred(numberOfDiceToThrow + 1);
-                    message = diceRoll.toString();
-                }else{
-                    isVorple = true;
-                    Vorple vorple = new Vorple();
-                    vorple.rollVorple();
-                    message = vorple.getString();
+                switch(typeOfDiceToThrow)
+                {
+                    case 0:
+                        diceRoll.rollDFour(numberOfDiceToThrow + 1);
+                        message = diceRoll.toString();
+                        break;
+                    case 1:
+                        diceRoll.rollDSix(numberOfDiceToThrow + 1);
+                        message = diceRoll.toString();
+                        break;
+                    case 2:
+                        diceRoll.rollDEight(numberOfDiceToThrow + 1);
+                        message = diceRoll.toString();
+                        break;
+                    case 3:
+                        diceRoll.rollDTen(numberOfDiceToThrow + 1);
+                        message = diceRoll.toString();
+                        break;
+                    case 4:
+                        diceRoll.rollDTwenty(numberOfDiceToThrow + 1);
+                        message = diceRoll.toString();
+                        break;
+                    case 5:
+                        diceRoll.rollDThirty(numberOfDiceToThrow + 1);
+                        message = diceRoll.toString();
+                        break;
+                    case 6:
+                        diceRoll.rollDOneHundred(numberOfDiceToThrow + 1);
+                        message = diceRoll.toString();
+                        break;
+                    case 7:
+                        isVorple = true;
+                        Vorple vorple = new Vorple();
+                        vorple.rollVorple();
+                        message = vorple.getString();
+                        break;
                 }
 
                 if (diceRoll.isCritical() == true && typeOfDiceToThrow == 4) {
